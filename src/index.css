@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.header-bg{
+    --s: 50px; /* control the size */
+    
+    background:
+      linear-gradient(135deg,#0000 18.75%,#282828 0 31.25%,#0000 0),
+      repeating-linear-gradient(45deg,#282828 -6.25% 6.25%,#1d1e22 0 18.75%);
+    background-size: var(--s) var(--s); 
+  
+}
