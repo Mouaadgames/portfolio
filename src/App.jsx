@@ -11,10 +11,18 @@ function App() {
 
 
 
-  function onHomeClick() { }
-  function onSkillsClick() { }
-  function onProjectsClick() { }
-  function onContactClick() { }
+  function onHomeClick() {
+    homeSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+  function onSkillsClick() {
+    skillsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+  function onProjectsClick() {
+    projectsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+  function onContactClick() {
+    contactSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
   return (
     <>
       <Header
@@ -24,7 +32,10 @@ function App() {
         onSkillsClick={onSkillsClick}
         ResumeUrl='/resume' // ?
       />
-
+      <Home
+        ref={homeSectionRef}
+        
+      />
     </>
   );
 }

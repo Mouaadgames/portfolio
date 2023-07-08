@@ -1,6 +1,6 @@
-function Button({ text }) {
+function Button({ text, textColor, color, width, onClick }) {
   return (
-    <button className="btn">{text}</button>
+    <button onClick={onClick} className={`font-extrabold ${width} text-xl btn ${color} ${textColor}`}>{text}</button>
   )
 }
 export default Button
