@@ -11,7 +11,7 @@ function Header({ onHomeClick, onSkillsClick, onProjectsClick, onContactClick })
   }, []);
   return (
     <header className="z-50 header-bg p-2 sticky top-0">
-      <div className="flex justify-between mx-auto max-w-[1000px] ">
+      <div className="flex justify-between mx-auto max-w-7xl ">
         <div className="tabs flex justify-evenly flex-nowrap flex-1 max-w-[600px]">
           <button className="tab tab-xs sm:tab-md md:tab-lg tab-bordered  tab-active" onClick={onHomeClick}>Home</button>
           <button className="tab tab-xs sm:tab-md md:tab-lg tab-bordered " onClick={onSkillsClick}>Skills</button>

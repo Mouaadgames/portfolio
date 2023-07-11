@@ -2,14 +2,13 @@ import { useForm, ValidationError } from '@formspree/react';
 import { useRef } from 'react';
 import Header from './sections/Header/Header';
 import Home from './sections/home/home';
+import Skills from './sections/Skills/Skills';
 
 function App() {
   const homeSectionRef = useRef(null)
   const skillsSectionRef = useRef(null)
   const projectsSectionRef = useRef(null)
   const contactSectionRef = useRef(null)
-
-
 
   function onHomeClick() {
     homeSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -30,12 +29,15 @@ function App() {
         onHomeClick={onHomeClick}
         onProjectsClick={onProjectsClick}
         onSkillsClick={onSkillsClick}
-        ResumeUrl='/resume' // ?
       />
       <Home
         ref={homeSectionRef}
-        
+        onContactClick = {onContactClick}
       />
+      <Skills
+      ref={skillsSectionRef}
+      />
+      
     </>
   );
 }

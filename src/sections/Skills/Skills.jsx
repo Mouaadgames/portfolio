@@ -1,8 +1,29 @@
-function Skills() {
+import { programmingTech } from "../../context/constants"
+import Skill from "./skill"
+import { forwardRef, useState, useEffect } from "react";
+
+function Skills({props},ref) {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth))
+    return () => {
+      window.removeEventListener("resize", () => setWidth(window.innerWidth))
+    };
+  }, []);
+
   return (
-    <div className=''>
-      
-    </div>
+    <section ref={ref} className=" bg-blue-950 flex justify-center">
+      <div className={`max-w-7xl flex-1 select-none pt-12 p-4 ${width > 680 ? "flex flex-col items-center" : ""}`}>
+        <p className="mb-6 underline-offset-4 text-neutral-400 underline">Click to view projects that use the specified technologies</p>
+        <div
+          className={`w-full grid gap-2 grid-cols-[repeat(auto-fit,minmax(240px,1fr))]`}>
+          {programmingTech.map((tech) => <Skill key={tech.name} tech={tech} isBig={true} />)}
+        </div>
+
+
+      </div>
+    </section>
   )
 }
-export default Skills
+export default forwardRef(Skills)
