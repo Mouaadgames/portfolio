@@ -1,9 +1,9 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useRef } from 'react';
-import Header from './sections/Header/Header';
+import Header from './sections/navBar/NavBar';
 import Home from './sections/home/home';
 import Skills from './sections/Skills/Skills';
-
+import Projects from './sections/projects/Projects'
 function App() {
   const homeSectionRef = useRef(null)
   const skillsSectionRef = useRef(null)
@@ -37,7 +37,7 @@ function App() {
       <Skills
       ref={skillsSectionRef}
       />
-      
+      <Projects/>
     </>
   );
 }

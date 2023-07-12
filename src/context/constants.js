@@ -51,7 +51,7 @@ export const programmingTech = [
     isYellow: true,
   },
   {
-    name: "JavaScript",
+    name: "Java Script",
     img: javaScript,
     isYellow: true,
   },
@@ -81,12 +81,12 @@ export const programmingTech = [
     isYellow: false,
   },
   {
-    name: "TailwindCss",
+    name: "Tailwind Css",
     img: tailwindCss,
     isYellow: false,
   },
   {
-    name: "TypeScript",
+    name: "Type Script",
     img: typescript,
     isYellow: false,
   },
@@ -99,17 +99,76 @@ export const programmingTech = [
 ]
 
 
-export const Projects =[
+import P1img1 from "../assets/projectsImg/project1/img1.png";
+import P1img2 from "../assets/projectsImg/project1/img2.png";
+import P2img1 from "../assets/projectsImg/project2/img1.png";
+import P2img2 from "../assets/projectsImg/project2/img2.png";
+import P3img1 from "../assets/projectsImg/project3/img1.png";
+import P3img2 from "../assets/projectsImg/project3/img2.png";
+import P4img1 from "../assets/projectsImg/project4/img1.png";
+import P4img2 from "../assets/projectsImg/project4/img2.png";
+
+
+export const Projects = [
   {
-    name:"",
-    smallDescription:"",
-    bigDescription:"",
-    openSource:{
-      isOpen:true,
-      link:""
+    id:1,
+    name: "the porpject mane",
+    smallDescription: " this is the project description",
+    bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
+    openSource: {
+      isOpen: true,
+      link: "github.com"
     },
-    demoLink:"",
-    
+    demoLink: "github.com",
+    videoLink: "https://www.youtube.com/watch?v=MlDTHzK1vKI",
+    img1: P1img1,
+    img2: P1img2
+
+  },
+  {
+    id:2,
+    name: "the porpject mane",
+    smallDescription: " this is the project description",
+    bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
+    openSource: {
+      isOpen: true,
+      link: "github.com"
+    },
+    demoLink: "github.com",
+    videoLink: "https://www.youtube.com/watch?v=MlDTHzK1vKI",
+    img1: P2img1,
+    img2: P2img2
+
+  },
+  {
+    id:3,
+    name: "the porpject mane",
+    smallDescription: " this is the project description",
+    bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
+    openSource: {
+      isOpen: true,
+      link: "github.com"
+    },
+    demoLink: "github.com",
+    videoLink: "https://www.youtube.com/watch?v=MlDTHzK1vKI",
+    img1: P3img1,
+    img2: P3img2
+
+  },
+  {
+    id:4,
+    name: "the porpject mane",
+    smallDescription: " this is the project description",
+    bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
+    openSource: {
+      isOpen: true,
+      link: "github.com"
+    },
+    demoLink: "github.com",
+    videoLink: "https://www.youtube.com/watch?v=MlDTHzK1vKI",
+    img1: P4img1,
+    img2: P4img2
+
   }
-] 
+]
 

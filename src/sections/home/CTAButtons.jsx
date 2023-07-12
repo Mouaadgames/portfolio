@@ -1,18 +1,17 @@
 import Button from "../../components/Button"
 import { RESUMEURL } from "../../context/constants"
 
-function CTAButtons({ onContactClick, isBig }) {
+function CTAButtons({ onContactClick, width }) {
 
 
   return (
-    <div className={`flex flex-nowrap`}>
+    <div className={`flex flex-nowrap ${width < 350 ? "gap-2" : "gap-8"}`}>
       <Button
         text="Contact Me"
         textColor="text-black"
         color="btn-primary"
         onClick={onContactClick}
       />
-      <span className="mx-4"></span>
       <Button
 
         text="Resume"
