@@ -1,18 +1,18 @@
 import { Projects as pro } from "../../context/constants"
 import ProjectCard from "./ProjectCard"
+import { forwardRef, useRef } from "react"
 
-function Projects() {
+function Projects({ highLightBool,highLightId }) {
   return (
-    <div className="grid grid-cols-3 grid-row-5">
+    <div className="grid gap-4 grid-cols-3 grid-row-5 max-w-7xl m-4 xl:mx-auto">
       {
         pro.map((value) => {
           return (
             <ProjectCard
               key={value.id}
-              style={value.style}
-              projectName={value.name}
-              projectSmallDescription={value.smallDescription}
-              projectImg={value.img1}
+              highLightId={highLightId}
+              highLightBool={highLightBool}
+              project={value}
             />)
         })
       }

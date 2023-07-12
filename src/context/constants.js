@@ -111,10 +111,12 @@ import P4img2 from "../assets/projectsImg/project4/img2.png";
 
 export const Projects = [
   {
-    id:1,
+    id: 1,
     name: "the porpject mane",
+    style: " col-span-2",
     smallDescription: " this is the project description",
-    bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
+    bigDescription: "hello this could be the description of the project \n ok here is this awesome fischer ",
+    techUsed:["Python","Git","HTML/CSS","My"],
     openSource: {
       isOpen: true,
       link: "github.com"
@@ -126,10 +128,12 @@ export const Projects = [
 
   },
   {
-    id:2,
+    id: 2,
     name: "the porpject mane",
+    style: "",
     smallDescription: " this is the project description",
     bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
+    techUsed:["Python","Git","HTML/CSS","My"],
     openSource: {
       isOpen: true,
       link: "github.com"
@@ -141,10 +145,12 @@ export const Projects = [
 
   },
   {
-    id:3,
+    id: 3,
     name: "the porpject mane",
+    style: "",
     smallDescription: " this is the project description",
     bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
+    techUsed:["Python","Git","HTML/CSS","My"],
     openSource: {
       isOpen: true,
       link: "github.com"
@@ -156,10 +162,12 @@ export const Projects = [
 
   },
   {
-    id:4,
+    id: 4,
     name: "the porpject mane",
+    style: "col-span-2",
     smallDescription: " this is the project description",
     bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
+    techUsed:["Python","Git","HTML/CSS","My"],
     openSource: {
       isOpen: true,
       link: "github.com"

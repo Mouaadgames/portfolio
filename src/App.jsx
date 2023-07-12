@@ -1,9 +1,11 @@
 import { useForm, ValidationError } from '@formspree/react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Header from './sections/navBar/NavBar';
 import Home from './sections/home/home';
 import Skills from './sections/Skills/Skills';
 import Projects from './sections/projects/Projects'
+
+import { Projects as ProjectsData } from './context/constants';
 function App() {
   const homeSectionRef = useRef(null)
   const skillsSectionRef = useRef(null)
@@ -22,6 +24,21 @@ function App() {
   function onContactClick() {
     contactSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
+
+
+  const [highLightBool, setHighLightBool] = useState(false);
+  const [highLightId, setHighLightId] = useState(0);
+  function HighLight(id) {
+    const project = ProjectsData.filter((pro) => pro.id === id)
+    if (!project) throw Error("no Project Found with the ID :" + id)
+    setHighLightBool(true)
+    setHighLightId(id)
+
+    setTimeout(() => {
+      setHighLightBool(false)
+    }, 500);
+  }
+
   return (
     <>
       <Header
@@ -32,12 +49,15 @@ function App() {
       />
       <Home
         ref={homeSectionRef}
-        onContactClick = {onContactClick}
+        onContactClick={onContactClick}
       />
       <Skills
-      ref={skillsSectionRef}
+        HighLight={HighLight}
+        ref={skillsSectionRef}
       />
-      <Projects/>
+      <Projects
+        highLightId={highLightId}
+        highLightBool={highLightBool} />
     </>
   );
 }

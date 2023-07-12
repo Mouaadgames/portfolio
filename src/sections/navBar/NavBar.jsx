@@ -16,11 +16,11 @@ function Header({ onHomeClick, onSkillsClick, onProjectsClick, onContactClick })
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
-          <ul tabIndex={0} className="menu  dropdown-content mt-3 z-[1] p-2 shadow-sm shadow-gray-400 bg-base-300 rounded-md w-52">
-            <li className="underline underline-offset-2 text-lg" onClick={onHomeClick}>Home</li>
-            <li className="text-neutral-400 text-lg" onClick={onSkillsClick}>Skills</li>
-            <li className="text-neutral-400 text-lg" onClick={onProjectsClick}>My Projects</li>
-            <li className="text-neutral-400 text-lg" onClick={onContactClick}>Contact</li>
+          <ul tabIndex={0} className="menu flex flex-col gap-2 dropdown-content mt-3 z-50 shadow-sm shadow-gray-400 bg-base-300 rounded-md w-52">
+            <li className="bg-slate-800 p-2 rounded-md underline underline-offset-2 text-lg" onClick={onHomeClick}>Home</li>
+            <li className="bg-slate-800 p-2 rounded-md text-neutral-400 text-lg" onClick={onSkillsClick}>Skills</li>
+            <li className="bg-slate-800 p-2 rounded-md text-neutral-400 text-lg" onClick={onProjectsClick}>My Projects</li>
+            <li className="bg-slate-800 p-2 rounded-md text-neutral-400 text-lg" onClick={onContactClick}>Contact</li>
           </ul>
         </div>
       </div>
