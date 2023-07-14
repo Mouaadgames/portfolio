@@ -116,7 +116,7 @@ export const Projects = [
     style: " col-span-2",
     smallDescription: " this is the project description",
     bigDescription: "hello this could be the description of the project \n ok here is this awesome fischer ",
-    techUsed:["Python","Git","HTML/CSS","My"],
+    techUsed:["Python","Git","CSS/HTML","My SQL"],
     openSource: {
       isOpen: true,
       link: "github.com"
@@ -133,7 +133,7 @@ export const Projects = [
     style: "",
     smallDescription: " this is the project description",
     bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
-    techUsed:["Python","Git","HTML/CSS","My"],
+    techUsed:["Python","Git","HTML/CSS","React"],
     openSource: {
       isOpen: true,
       link: "github.com"

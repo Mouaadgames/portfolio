@@ -32,7 +32,9 @@
   width: 100%;
 }
 
-
+.cardBackground{
+  scroll-margin-top: 10rem;
+}
 .cardBackground::before {
   background-color: rgba(0, 0, 0, 0) !important;
   background-image: linear-gradient(0deg,
@@ -48,7 +50,7 @@
   border-radius: 0 !important;
 }
 
-.halfBlackImg::before{
+.halfBlackImg::before {
   position: relative;
   content: "";
   background-color: black !important;

@@ -4,7 +4,7 @@ import Header from './sections/navBar/NavBar';
 import Home from './sections/home/home';
 import Skills from './sections/Skills/Skills';
 import Projects from './sections/projects/Projects'
-
+import Model from './components/model/model';
 import { Projects as ProjectsData } from './context/constants';
 function App() {
   const homeSectionRef = useRef(null)
@@ -27,16 +27,25 @@ function App() {
 
 
   const [highLightBool, setHighLightBool] = useState(false);
-  const [highLightId, setHighLightId] = useState(0);
-  function HighLight(id) {
-    const project = ProjectsData.filter((pro) => pro.id === id)
-    if (!project) throw Error("no Project Found with the ID :" + id)
-    setHighLightBool(true)
-    setHighLightId(id)
-
+  const [highLightIds, setHighLightIds] = useState([]);
+  const [scrollToViewBool, setScrollToViewBool] = useState(false);
+  function HighLight(techName) {
+    const projects = ProjectsData.filter((pro) => {
+      const projectArr = pro.techUsed.filter((projectUsed) => {
+        return projectUsed === techName
+      })
+      return !!projectArr.length
+    })
+    if (!projects.length) return
+    setHighLightIds(projects.map((project) => project.id))
+    setScrollToViewBool(true)
     setTimeout(() => {
-      setHighLightBool(false)
+      setHighLightBool(true)
     }, 500);
+    setTimeout(() => {
+      setScrollToViewBool(false)
+      setHighLightBool(false)
+    }, 900);
   }
 
   return (
@@ -56,9 +65,13 @@ function App() {
         ref={skillsSectionRef}
       />
       <Projects
-        highLightId={highLightId}
+        scrollToViewBool={scrollToViewBool}
+        highLightIds={highLightIds}
         highLightBool={highLightBool} />
+      <Model
+      project={ProjectsData[0]} />
     </>
+
   );
 }
 export default App;

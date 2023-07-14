@@ -7,11 +7,7 @@ function Animation({ animationData }) {
   useEffect(() => {
     animationRef.current.playSegments([100, 300])
   }, []);
-  // const options = {
-  //   animationData,
-  //   loop: true,
-  //   autoplay: true,
-  // }
+  
 
   return (
     <div className="relative min-w-[300px] top-[-100px] left-10 lg:top-0">
