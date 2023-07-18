@@ -1,10 +1,10 @@
-import { useForm, ValidationError } from '@formspree/react';
 import { useRef, useState } from 'react';
 import Header from './sections/navBar/NavBar';
 import Home from './sections/home/home';
 import Skills from './sections/Skills/Skills';
 import Projects from './sections/projects/Projects'
 import Model from './components/model/model';
+import Contact from './sections/contact/Contact';
 import { Projects as ProjectsData } from './context/constants';
 function App() {
   const homeSectionRef = useRef(null)
@@ -37,6 +37,7 @@ function App() {
       return !!projectArr.length
     })
     if (!projects.length) return
+    projects.reverse()
     setHighLightIds(projects.map((project) => project.id))
     setScrollToViewBool(true)
     setTimeout(() => {
@@ -65,11 +66,15 @@ function App() {
         ref={skillsSectionRef}
       />
       <Projects
+        ref={projectsSectionRef}
         scrollToViewBool={scrollToViewBool}
         highLightIds={highLightIds}
         highLightBool={highLightBool} />
       <Model
-      project={ProjectsData[0]} />
+        project={ProjectsData[0]} />
+      <Contact
+        ref={contactSectionRef}
+      />
     </>
 
   );

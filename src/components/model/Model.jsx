@@ -1,46 +1,55 @@
-import { Projects, programmingTech } from "../../context/constants"
 import TechIcons from "../../sections/projects/TechIcons";
 import PreviewImg from "./PreviewImg";
+import youtube from "../../assets/youtube.png"
+import aboutThis from '../../assets/animation_lk5ptfo6.json'
+import Lottie from "lottie-react"
+
 function Model({ project }) {
   return (
     <>
-      <dialog id="my_modal_1" className="modal bg-[#012A]">
-        <form method="dialog" className="modal-box max-w-6xl ">
+      <dialog id="my_modal_1" className="modal bg-[#012A] ">
+        <form method="dialog" className=" modal-box max-w-6xl">
+          <div>
+            <button className=" btn float-right btn-circle">✖</button>
+          </div>
           <h3 className="font-bold  text-2xl text-center">{project.name}</h3>
           <br />
-          <div className="flex max-w-[100%] ">
+          <div className="flex flex-col-reverse gap-4 lg:flex-row max-w-[100%] ">
             <div className="flex flex-col basis-full justify-between  max-h-[60vh] ">
               <div className="overflow-y-auto over min-h-[40vh]">
-                <h4>About This Project</h4>
-                <p>Lorem ipsum dolor.</p>
+                <div>
+                  <Lottie className="invert" animationData={aboutThis} />
+                </div>
+                <ul className="text-xl list-disc">{project.bigDescription.map((elem, i) => { return (<li key={i} className="my-4 mr-3">🔴 {elem}</li>) })}</ul>
               </div>
-              <div className="flex gap-6 justify-start mt-4">
-                <a className="btn w-32">hello</a>
-                <a className="btn w-32">hello</a>
+              <div className="flex justify-start mt-4 flex-wrap">
+                <a href={project.demoLink} className="btn w-32 mr-4 bg-orange-400">👁Live Demo</a>
+                <a href={project.openSource.link} className={`btn w-32 ${project.openSource.isOpen ? "" : "btn-disabled "}`}>{project.openSource.isOpen ? "⌨" : "🔒"}View Code</a>
               </div>
               <div className="flex flex-col gap-1 mt-3">
-                <span className="">Technologies used</span>
-                <TechIcons techs={Projects[0].techUsed} />
+                <span>Technologies used : </span>
+                <TechIcons techs={project.techUsed} />
               </div>
             </div>
             <div className="flex flex-col basis-full gap-3">
               <div className="carousel w-full aspect-video">
                 <div id="item1" className="carousel-item  w-full bg-black">
-                  <img src={project.img1} className="w-full object-scale-down" />
-                </div>
+                  <iframe className="h-full w-full" src={"https://www.youtube.com/embed/" + project.videoLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>                </div>
                 <div id="item2" className="carousel-item  w-full bg-black">
-                  <img src={project.img2} className="w-full object-scale-down" />
+                  <img src={project.img1} className="w-full object-scale-down" />
                 </div>
                 <div id="item3" className="carousel-item  w-full bg-black">
-                  <img src={project.img1} className="w-full object-scale-down" />
+                  <img src={project.img2} className="w-full object-scale-down" />
                 </div>
               </div>
               <PreviewImg
-                images={[Projects[1].img1, Projects[0].img1, Projects[0].img2]}
+                images={[youtube, project.img1, project.img2]}
               />
             </div>
           </div>
-
+        </form>
+        <form method="dialog" className="modal-backdrop">
+          <button className="cursor-default">close</button>
         </form>
       </dialog>
     </>

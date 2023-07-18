@@ -115,14 +115,14 @@ export const Projects = [
     name: "the porpject mane",
     style: " col-span-2",
     smallDescription: " this is the project description",
-    bigDescription: "hello this could be the description of the project \n ok here is this awesome fischer ",
-    techUsed:["Python","Git","CSS/HTML","My SQL"],
+    bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
+    techUsed: ["Python", "Git", "CSS/HTML", "My SQL"],
     openSource: {
       isOpen: true,
-      link: "github.com"
+      link: "https://github.com"
     },
-    demoLink: "github.com",
-    videoLink: "https://www.youtube.com/watch?v=MlDTHzK1vKI",
+    demoLink: "https://github.com",
+    videoLink: "MlDTHzK1vKI",
     img1: P1img1,
     img2: P1img2
 
@@ -132,14 +132,14 @@ export const Projects = [
     name: "the porpject mane",
     style: "",
     smallDescription: " this is the project description",
-    bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
-    techUsed:["Python","Git","HTML/CSS","React"],
+    bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
+    techUsed: ["Python", "Git", "HTML/CSS", "React"],
     openSource: {
       isOpen: true,
-      link: "github.com"
+      link: "https://github.com"
     },
-    demoLink: "github.com",
-    videoLink: "https://www.youtube.com/watch?v=MlDTHzK1vKI",
+    demoLink: "https://github.com",
+    videoLink: "BfvoONHXuQA",
     img1: P2img1,
     img2: P2img2
 
@@ -149,14 +149,14 @@ export const Projects = [
     name: "the porpject mane",
     style: "",
     smallDescription: " this is the project description",
-    bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
-    techUsed:["Python","Git","HTML/CSS","My"],
+    bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
+    techUsed: ["Python", "Git", "HTML/CSS", "My"],
     openSource: {
       isOpen: true,
-      link: "github.com"
+      link: "https://github.com"
     },
-    demoLink: "github.com",
-    videoLink: "https://www.youtube.com/watch?v=MlDTHzK1vKI",
+    demoLink: "https://github.com",
+    videoLink: "MlDTHzK1vKI",
     img1: P3img1,
     img2: P3img2
 
@@ -166,14 +166,14 @@ export const Projects = [
     name: "the porpject mane",
     style: "col-span-2",
     smallDescription: " this is the project description",
-    bigDescription: "heelol this could be the description of the project \n ok here is this awesome fischer ",
-    techUsed:["Python","Git","HTML/CSS","My"],
+    bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
+    techUsed: ["Python", "Git", "HTML/CSS", "My"],
     openSource: {
       isOpen: true,
-      link: "github.com"
+      link: "https://github.com"
     },
-    demoLink: "github.com",
-    videoLink: "https://www.youtube.com/watch?v=MlDTHzK1vKI",
+    demoLink: "https://github.com",
+    videoLink: "MlDTHzK1vKI",
     img1: P4img1,
     img2: P4img2
 

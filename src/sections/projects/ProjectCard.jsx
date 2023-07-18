@@ -11,7 +11,10 @@ function ProjectCard({ project, highLightBool, highLightIds, scrollToViewBool },
       const highLightId = highLightIds[i];
       if (highLightId === project.id) {
         if (scrollToViewBool && !allReadyScrolled.current) {
-          projectDivRef.current?.scrollIntoView({ behavior: 'smooth' })
+          if (i === 0) {
+            console.log(i)
+            projectDivRef.current?.scrollIntoView({ behavior: 'smooth' })
+          }
           allReadyScrolled.current = true
         }
         allReadyScrolled.current = !scrollToViewBool ? false : allReadyScrolled.current
