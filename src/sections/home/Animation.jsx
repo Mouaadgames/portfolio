@@ -1,17 +1,18 @@
 import Lottie from "lottie-react"
-import { useRef, useEffect } from "react"
-
-function Animation({ animationData }) {
-
-  const animationRef = useRef(null)
+import { useEffect, useRef } from "react";
+import animationData from '../../assets/black-bg-web-dev.json'
+import useIsInViewport from "../../hooks/useIsInViewport"
+function Animation() {
+  const aniRef = useRef(null)
+  const divRef = useRef(null)
+  const IsIntersecting = useIsInViewport(divRef)
   useEffect(() => {
-    animationRef.current.playSegments([100, 300])
-  }, []);
-  
-
+    if (IsIntersecting)
+      aniRef.current.playSegments([100, 300], false)
+  }, [IsIntersecting]);
   return (
-    <div className="relative min-w-[300px] top-[-100px] left-10 lg:top-0">
-      <Lottie lottieRef={animationRef} animationData={animationData} />
+    <div ref={divRef} className="relative min-w-full aspect-square  top-[-100px] left-10 lg:top-0">
+      {IsIntersecting ? (< Lottie lottieRef={aniRef} animationData={animationData} />) : null}
     </div>
   )
 }

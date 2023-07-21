@@ -2,7 +2,7 @@ import TechIcons from "./TechIcons"
 import { useEffect, useState, useRef } from "react"
 
 
-function ProjectCard({ project, highLightBool, highLightIds, scrollToViewBool }, ref) {
+function ProjectCard({ project, highLightBool, highLightIds, scrollToViewBool, setModelProject }) {
   const projectDivRef = useRef(null)
   const allReadyScrolled = useRef(false)
   const [highLight, setHighLight] = useState(false);
@@ -24,7 +24,7 @@ function ProjectCard({ project, highLightBool, highLightIds, scrollToViewBool },
     }
   }, [highLightBool, scrollToViewBool])
   return (
-    <div ref={projectDivRef} onClick={() => window.my_modal_1.showModal()} className={`select-none card bg-base-100 shadow-xl w-full max-h-[60vh] image-full cardBackground ${project.style ? "col-span-2" : ""}`}>
+    <div ref={projectDivRef} onClick={() => { setModelProject(project); window.modal1.showModal() }} className={`select-none card bg-base-100 shadow-xl w-full max-h-[60vh] image-full cardBackground ${project.style ? "col-span-2" : ""}`}>
 
       <figure className="boarderNone halfBlackImg" ><img className="rounded-none w-full" src={project.img1} alt="Shoes" /></figure>
       <div className={`z-10 transition-all ${highLight ? "bg-[#FFF6]" : "hover:bg-[#0007] "}`}>

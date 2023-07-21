@@ -1,14 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { RESUMEURL } from "../../context/constants";
-function Header({ onHomeClick, onSkillsClick, onProjectsClick, onContactClick }) {
+import useIsInViewport from "../../hooks/useIsInViewport";
+function Header({ onHomeClick, onSkillsClick, onProjectsClick, onContactClick, refHome, refSkills, refProjects, refContact }) {
   const [width, setWidth] = useState(window.innerWidth);
-
+  const boolHome = useIsInViewport(refHome, "-20%")
+  const boolSkills = useIsInViewport(refSkills, "-50%")
+  const boolProjects = useIsInViewport(refProjects, "-30%")
+  const boolContact = useIsInViewport(refContact, "-150px")
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth))
     return () => {
       window.removeEventListener("resize", () => setWidth(window.innerWidth))
     };
   }, []);
+
   return (
     <div className="navbar bg-base-300 z-50 p-2 sticky top-0">
       <div className="navbar-start">
@@ -26,10 +31,10 @@ function Header({ onHomeClick, onSkillsClick, onProjectsClick, onContactClick })
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li className="tab tab-xs sm:tab-md md:tab-lg tab-bordered  tab-active" onClick={onHomeClick}>Home</li>
-          <li className="tab tab-xs sm:tab-md md:tab-lg tab-bordered " onClick={onSkillsClick}>Skills</li>
-          <li className="tab tab-xs sm:tab-md md:tab-lg tab-bordered " onClick={onProjectsClick} >My Projects</li>
-          <li className="tab tab-xs sm:tab-md md:tab-lg tab-bordered " onClick={onContactClick}  >Contact</li>
+          <li className={`tab tab-xs sm:tab-md md:tab-lg tab-bordered ${boolHome && !boolSkills ? "tab-active" : ""}`} onClick={onHomeClick}>Home</li>
+          <li className={`tab tab-xs sm:tab-md md:tab-lg tab-bordered ${boolSkills && !boolProjects ? "tab-active" : ""}`} onClick={onSkillsClick}>Skills</li>
+          <li className={`tab tab-xs sm:tab-md md:tab-lg tab-bordered ${boolProjects && !boolContact ? "tab-active" : ""}`} onClick={onProjectsClick} >My Projects</li>
+          <li className={`tab tab-xs sm:tab-md md:tab-lg tab-bordered ${boolContact ? "tab-active" : ""}`} onClick={onContactClick}  >Contact</li>
         </ul>
       </div>
       <div className="navbar-end">

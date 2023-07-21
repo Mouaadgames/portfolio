@@ -18,6 +18,17 @@ import tailwindCss from "../assets/programmingTechnologies/tailwindCss.png"
 import typescript from "../assets/programmingTechnologies/typescript.png"
 import react from "../assets/programmingTechnologies/react.png"
 
+import P1img1 from "../assets/projectsImg/project1/img1.png";
+import P1img2 from "../assets/projectsImg/project1/img2.png";
+import P2img1 from "../assets/projectsImg/project2/img1.png";
+import P2img2 from "../assets/projectsImg/project2/img2.png";
+import P3img1 from "../assets/projectsImg/project3/img1.png";
+import P3img2 from "../assets/projectsImg/project3/img2.png";
+import P4img1 from "../assets/projectsImg/project4/img1.png";
+import P4img2 from "../assets/projectsImg/project4/img2.png";
+
+// import  homeAnimation from "../assets/black-bg-web-dev.json"
+// import about from '../assets/animation_lk5ptfo6.json'4
 
 export const programmingTech = [
   {
@@ -99,30 +110,22 @@ export const programmingTech = [
 ]
 
 
-import P1img1 from "../assets/projectsImg/project1/img1.png";
-import P1img2 from "../assets/projectsImg/project1/img2.png";
-import P2img1 from "../assets/projectsImg/project2/img1.png";
-import P2img2 from "../assets/projectsImg/project2/img2.png";
-import P3img1 from "../assets/projectsImg/project3/img1.png";
-import P3img2 from "../assets/projectsImg/project3/img2.png";
-import P4img1 from "../assets/projectsImg/project4/img1.png";
-import P4img2 from "../assets/projectsImg/project4/img2.png";
 
 
 export const Projects = [
   {
     id: 1,
-    name: "the porpject mane",
+    name: "the project 1 name",
     style: " col-span-2",
-    smallDescription: " this is the project description",
-    bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
-    techUsed: ["Python", "Git", "CSS/HTML", "My SQL"],
+    smallDescription: " this the outer project description",
+    bigDescription: ["hello this could be the description of the project  ", "the second line here", "a third one"],
+    techUsed: ["NodeJs", "Git", "CSS/HTML", "My SQL"],
     openSource: {
       isOpen: true,
       link: "https://github.com"
     },
     demoLink: "https://github.com",
-    videoLink: "MlDTHzK1vKI",
+    videoLink: "MLpWrANjFbI",
     img1: P1img1,
     img2: P1img2
 
@@ -156,7 +159,7 @@ export const Projects = [
       link: "https://github.com"
     },
     demoLink: "https://github.com",
-    videoLink: "MlDTHzK1vKI",
+    videoLink: "MLpWrANjFbI",
     img1: P3img1,
     img2: P3img2
 
@@ -173,7 +176,7 @@ export const Projects = [
       link: "https://github.com"
     },
     demoLink: "https://github.com",
-    videoLink: "MlDTHzK1vKI",
+    videoLink: "MLpWrANjFbI",
     img1: P4img1,
     img2: P4img2
 

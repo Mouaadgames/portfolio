@@ -1,9 +1,12 @@
 {
   "name": "portfolio",
   "private": true,
+  "homepage": "https://mouaadgamse.github.io/portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -11,10 +14,10 @@
   },
   "dependencies": {
     "@formspree/react": "^2.4.4",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "swiper": "^10.0.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
@@ -26,6 +29,7 @@
     "eslint-plugin-react": "^7.25.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.25",
     "tailwindcss": "^3.3.2",
     "vite": "^4.4.0"
