@@ -38,7 +38,7 @@ export const programmingTech = [
   },
 
   {
-    name: "CSS/HTML",
+    name: "HTML/CSS",
     img: CSS_HTML,
     isYellow: true,
   },
@@ -122,7 +122,7 @@ export const Projects = [
     style: "col-span-2",
     smallDescription: "A user-friendly web platform for effortlessly constructing dashboard interfaces through drag-and-drop actions.",
     bigDescription: ["help the user to create the best dashboard UI for their web application", "user-friendly  UI", "the ability to export the work as HTML and CSS", "integrate with google drive to give users the ability to store their projects", "the back-end handel the user authentication"],
-    techUsed: ["React", "JavaScript", "Tailwind Css", "CSS/HTML", "Express", "NodeJs"],
+    techUsed: ["React", "JavaScript", "Tailwind Css", "HTML/CSS", "Express", "NodeJs"],
     openSource: {
       isOpen: true,
       link: "https://github.com"
@@ -136,10 +136,10 @@ export const Projects = [
   {
     id: 2,
     name: "extension ",
-    style: "col-span-1",
+    style: "",
     smallDescription: "this is the extension project description",
-    bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
-    techUsed: ["Python", "Git", "CSS/HTML", "React"],
+    bigDescription: ["this could be the description of the project ok here is this awesome fischer ", "hello again"],
+    techUsed: ["Python", "Git", "HTML/CSS", "React"],
     openSource: {
       isOpen: false,
       link: "https://github.com"
@@ -152,16 +152,16 @@ export const Projects = [
   },
   {
     id: 3,
-    name: "an other project",
+    name: "My personal portfolio",
     style: "",
-    smallDescription: " this is the project description",
-    bigDescription: ["the description of the project ok here is this awesome fischer ", "hello again"],
-    techUsed: ["Python", "Git", "CSS/HTML", "Mongo DB"],
+    smallDescription: "the place where I show my work and skills on ",
+    bigDescription: ["As you see in this webPage ", "Dark them color palette", "Responsive design and responsive floating model", "skills section that guid user to the corresponding project", "all skills and project are controlled from a single source", "You can watch the demo video to see all the features"],
+    techUsed: ["React", "Java Script", "Tailwind Css"],
     openSource: {
       isOpen: true,
-      link: "https://github.com"
+      link: "https://github.com/Mouaadgames/portfolio/tree/master"
     },
-    demoLink: "https://github.com",
+    demoLink: "#",
     videoLink: "MLpWrANjFbI",
     img1: P3img1,
     img2: P3img2
@@ -169,10 +169,10 @@ export const Projects = [
   },
   {
     id: 4,
-    name: "the last project",
+    name: "the project name",
     style: "col-span-2",
     smallDescription: " this is the project description",
-    bigDescription: ["the description of the project ok here is this awesome fischer ", "hello again"],
+    bigDescription: ["the description of the project", "more description"],
     techUsed: ["Python", "CSharp", "HTML/CSS"],
     openSource: {
       isOpen: true,

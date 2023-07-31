@@ -36,8 +36,8 @@ function Model({ project, setModelProject }) {
                   <ul className="text-xl list-disc">{project.bigDescription.map((elem, i) => { return (<li key={i} className="my-4 mr-3">✅ {elem}</li>) })}</ul>
                 </div>
                 <div className="flex justify-start mt-4 flex-wrap">
-                  <a href={project.demoLink} className="btn w-32 mr-4 bg-orange-400">👁Live Demo</a>
-                  <a href={project.openSource.link} className={`btn w-32 ${project.openSource.isOpen ? "" : "btn-disabled "}`}>{project.openSource.isOpen ? "⌨" : "🔒"}View Code</a>
+                  <a href={project.demoLink} target="_blank" className="btn w-32 mr-4 bg-orange-400">👁Live Demo</a>
+                  <a href={project.openSource.link} target="_blank" className={`btn w-32 ${project.openSource.isOpen ? "" : "btn-disabled "}`}>{project.openSource.isOpen ? "⌨" : "🔒"}View Code</a>
                 </div>
                 <div className="flex flex-col gap-1 mt-3">
                   <span>Technologies used : </span>
