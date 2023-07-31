@@ -37,20 +37,15 @@ function App() {
       return !!projectArr.length
     })
     if (!projects.length) return
-    projects.reverse()
     setHighLightIds(projects.map((project) => project.id))
-    setScrollToViewBool(true)
-    setTimeout(() => {
-      setHighLightBool(true)
-    }, 500);
+    setScrollToViewBool(true) // broadcast to all project card component 
     setTimeout(() => {
       setScrollToViewBool(false)
-      setHighLightBool(false)
-    }, 900);
+    }, 100);
   }
 
   return (
-    <>
+    <main className='bg-gray-900'>
       <Header
         onContactClick={onContactClick}
         onHomeClick={onHomeClick}
@@ -78,7 +73,7 @@ function App() {
       <Contact
         ref={contactSectionRef}
       />
-    </>
+    </main>
 
   );
 }

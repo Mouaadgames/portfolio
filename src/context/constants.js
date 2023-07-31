@@ -32,39 +32,35 @@ import P4img2 from "../assets/projectsImg/project4/img2.png";
 
 export const programmingTech = [
   {
-    name: "Python",
-    img: python,
-    isYellow: false,
+    name: "React",
+    img: react,
+    isYellow: true,
   },
-  {
-    name: "CSharp",
-    img: cSharp,
-    isYellow: false,
-  },
+
   {
     name: "CSS/HTML",
     img: CSS_HTML,
     isYellow: true,
   },
   {
-    name: "Git",
-    img: Git,
+    name: "Tailwind Css",
+    img: tailwindCss,
     isYellow: true,
+  },
+  {
+    name: "SASS",
+    img: scss,
+    isYellow: false,
   },
   {
     name: "GraphQL",
     img: graphQL,
-    isYellow: true,
+    isYellow: false,
   },
   {
     name: "NodeJs",
     img: nodeJs,
-    isYellow: true,
-  },
-  {
-    name: "Java Script",
-    img: javaScript,
-    isYellow: true,
+    isYellow: false,
   },
   {
     name: "My SQL",
@@ -77,24 +73,9 @@ export const programmingTech = [
     isYellow: true,
   },
   {
-    name: "Mongo DB",
-    img: mongoDB,
-    isYellow: false,
-  },
-  {
-    name: "React Query",
-    img: reactQuery,
-    isYellow: false,
-  },
-  {
-    name: "SASS",
-    img: scss,
-    isYellow: false,
-  },
-  {
-    name: "Tailwind Css",
-    img: tailwindCss,
-    isYellow: false,
+    name: "Java Script",
+    img: javaScript,
+    isYellow: true,
   },
   {
     name: "Type Script",
@@ -102,10 +83,32 @@ export const programmingTech = [
     isYellow: false,
   },
   {
-    name: "React",
-    img: react,
+    name: "Mongo DB",
+    img: mongoDB,
+    isYellow: true,
+  },
+  {
+    name: "React Query",
+    img: reactQuery,
     isYellow: false,
   },
+  {
+    name: "Git",
+    img: Git,
+    isYellow: false,
+  },
+
+  {
+    name: "Python",
+    img: python,
+    isYellow: false,
+  },
+  {
+    name: "CSharp",
+    img: cSharp,
+    isYellow: false,
+  },
+
 
 ]
 
@@ -115,11 +118,11 @@ export const programmingTech = [
 export const Projects = [
   {
     id: 1,
-    name: "the project 1 name",
-    style: " col-span-2",
-    smallDescription: " this the outer project description",
-    bigDescription: ["hello this could be the description of the project  ", "the second line here", "a third one"],
-    techUsed: ["NodeJs", "Git", "CSS/HTML", "My SQL"],
+    name: "Dashboard Builder",
+    style: "col-span-2",
+    smallDescription: "A user-friendly web platform for effortlessly constructing dashboard interfaces through drag-and-drop actions.",
+    bigDescription: ["help the user to create the best dashboard UI for their web application", "user-friendly  UI", "the ability to export the work as HTML and CSS", "integrate with google drive to give users the ability to store their projects", "the back-end handel the user authentication"],
+    techUsed: ["React", "JavaScript", "Tailwind Css", "CSS/HTML", "Express", "NodeJs"],
     openSource: {
       isOpen: true,
       link: "https://github.com"
@@ -132,13 +135,13 @@ export const Projects = [
   },
   {
     id: 2,
-    name: "the porpject mane",
-    style: "",
-    smallDescription: " this is the project description",
+    name: "extension ",
+    style: "col-span-1",
+    smallDescription: "this is the extension project description",
     bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
     techUsed: ["Python", "Git", "HTML/CSS", "React"],
     openSource: {
-      isOpen: true,
+      isOpen: false,
       link: "https://github.com"
     },
     demoLink: "https://github.com",

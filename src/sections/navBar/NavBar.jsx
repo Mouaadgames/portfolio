@@ -14,20 +14,25 @@ function Header({ onHomeClick, onSkillsClick, onProjectsClick, onContactClick, r
     };
   }, []);
 
+  const ref = useRef(null)
+  function closeHumbuggerMenu() {
+    if (ref.current?.attributes.item(1)?.name)
+      ref.current.attributes.removeNamedItem("open")
+  }
   return (
-    <div className="navbar bg-base-300 z-50 p-2 sticky top-0">
+    <nav className="navbar z-50 p-2 sticky backdrop-blur-lg top-0  bg-[#000A]">
       <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+        <details ref={ref} className="dropdown">
+          <summary tabIndex={0} onClick={() => { console.log(ref.current.classList); }} className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-          </label>
-          <ul tabIndex={0} className="menu flex flex-col gap-2 dropdown-content mt-3 z-50 shadow-sm shadow-gray-400 bg-base-300 rounded-md w-52">
-            <li className="bg-slate-800 p-2 rounded-md underline underline-offset-2 text-lg" onClick={onHomeClick}>Home</li>
-            <li className="bg-slate-800 p-2 rounded-md text-neutral-400 text-lg" onClick={onSkillsClick}>Skills</li>
-            <li className="bg-slate-800 p-2 rounded-md text-neutral-400 text-lg" onClick={onProjectsClick}>My Projects</li>
-            <li className="bg-slate-800 p-2 rounded-md text-neutral-400 text-lg" onClick={onContactClick}>Contact</li>
+          </summary>
+          <ul tabIndex={0} className="menu flex flex-col  dropdown-content mt-3 z-50 shadow-sm shadow-gray-400 bg-base-300 rounded-md w-52">
+            <li className={`p-2 rounded-md ${boolHome && !boolSkills ? "underline underline-offset-2" : "text-neutral-400"}        text-lg`} onClick={e => { closeHumbuggerMenu(); onHomeClick(e) }}>Home</li>
+            <li className={`p-2 rounded-md ${boolSkills && !boolProjects ? "underline underline-offset-2" : "text-neutral-400"}    text-lg`} onClick={e => { closeHumbuggerMenu(); onSkillsClick(e) }}>Skills</li>
+            <li className={`p-2 rounded-md ${boolProjects && !boolContact ? "underline underline-offset-2" : "text-neutral-400"}   text-lg`} onClick={e => { closeHumbuggerMenu(); onProjectsClick(e) }}>My Projects</li>
+            <li className={`p-2 rounded-md ${boolContact ? "underline underline-offset-2" : "text-neutral-400"}                    text-lg`} onClick={e => { closeHumbuggerMenu(); onContactClick(e) }}>Contact</li>
           </ul>
-        </div>
+        </details>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -42,7 +47,7 @@ function Header({ onHomeClick, onSkillsClick, onProjectsClick, onContactClick, r
           <span className="mx-2 material-symbols-outlined mr-3">description</span>{width > 500 ? "RESUME" : ""}
         </a>
       </div>
-    </div>
+    </nav>
   )
 }
 export default Header

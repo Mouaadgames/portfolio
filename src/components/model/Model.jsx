@@ -23,9 +23,9 @@ function Model({ project, setModelProject }) {
         {project == null ? null : (<>
           <form method="dialog" className=" modal-box max-w-6xl">
             <div>
-              <button className=" btn float-right btn-circle">✖</button>
+              <button className=" btn default float-right btn-circle">✖</button>
             </div>
-            <h3 className="font-bold  text-2xl text-center">{project.name}</h3>
+            <h3 className="font-bold  text-gray-200 titleFont text-4xl text-center">{project.name}</h3>
             <br />
             <div className="flex flex-col-reverse gap-4 lg:flex-row max-w-[100%] ">
               <div className="flex flex-col basis-full justify-between  max-h-[60vh] ">
@@ -33,7 +33,7 @@ function Model({ project, setModelProject }) {
                   <div>
                     <Lottie className="invert" animationData={about} />
                   </div>
-                  <ul className="text-xl list-disc">{project.bigDescription.map((elem, i) => { return (<li key={i} className="my-4 mr-3">🔴 {elem}</li>) })}</ul>
+                  <ul className="text-xl list-disc">{project.bigDescription.map((elem, i) => { return (<li key={i} className="my-4 mr-3">✅ {elem}</li>) })}</ul>
                 </div>
                 <div className="flex justify-start mt-4 flex-wrap">
                   <a href={project.demoLink} className="btn w-32 mr-4 bg-orange-400">👁Live Demo</a>

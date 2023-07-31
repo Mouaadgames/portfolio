@@ -70,7 +70,7 @@ function Contact(props, ref) {
           </div>
         </div>
         <div className="text-center lg:text-left mx-4">
-          <h1 className="text-5xl font-bold">Let's <span className='underline underline-offset-3'>connect</span>!</h1>
+          <h1 className="text-5xl font-bold ">Let's <span className='underline underline-offset-3'>connect</span>!</h1>
           <p className='mt-6 text-lg font-bold'>About Me :</p>
           <p className=" max-w-2xl pb-4">I am an enthusiastic learner and a skilled FullStack web developer with significant expertise in IoT programming and game development. Throughout my journey, I have accumulated valuable experience in those field.</p>
           <p><span>E-mail :</span> <a href='mailto:mouaadelbarrik@gmail.com' className='underline text-blue-400'>mouaadelbarrik@gmail.com</a></p>
