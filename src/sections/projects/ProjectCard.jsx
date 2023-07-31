@@ -68,8 +68,8 @@ function ProjectCard({ project, highLightBool, highLightIds, scrollToViewBool, s
   }, [isShown, needToBeHighlight.current]);
 
   return (
-    <div ref={projectDivRef} onClick={() => { setModelProject(project); window.modal1.showModal() }} className={` default-hidden select-none card bg-base-100 shadow-xl w-full max-h-[60vh] image-full cardBackground ${project.style}  `}>
-
+    <div ref={projectDivRef} onClick={() => { setModelProject(project); window.modal1.showModal() }} className={` default-hidden select-none card bg-base-100 shadow-xl w-full max-h-[60vh] image-full cardBackground ${project.style} `}>
+      <span className="col-span-2 hidden"></span>
       <figure className="boarderNone halfBlackImg" >
         <img className="rounded-none w-full" src={project.img1} alt="Shoes" />
       </figure>
@@ -80,7 +80,6 @@ function ProjectCard({ project, highLightBool, highLightIds, scrollToViewBool, s
           <span className="flex-shrink">{project.smallDescription}</span>
         </div>
       </div>
-
     </div>
   )
 }

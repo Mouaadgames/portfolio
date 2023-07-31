@@ -139,7 +139,7 @@ export const Projects = [
     style: "col-span-1",
     smallDescription: "this is the extension project description",
     bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
-    techUsed: ["Python", "Git", "HTML/CSS", "React"],
+    techUsed: ["Python", "Git", "CSS/HTML", "React"],
     openSource: {
       isOpen: false,
       link: "https://github.com"
@@ -152,11 +152,11 @@ export const Projects = [
   },
   {
     id: 3,
-    name: "the porpject mane",
+    name: "an other project",
     style: "",
     smallDescription: " this is the project description",
-    bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
-    techUsed: ["Python", "Git", "HTML/CSS", "My"],
+    bigDescription: ["the description of the project ok here is this awesome fischer ", "hello again"],
+    techUsed: ["Python", "Git", "CSS/HTML", "Mongo DB"],
     openSource: {
       isOpen: true,
       link: "https://github.com"
@@ -169,11 +169,11 @@ export const Projects = [
   },
   {
     id: 4,
-    name: "the porpject mane",
+    name: "the last project",
     style: "col-span-2",
     smallDescription: " this is the project description",
-    bigDescription: ["heelol this could be the description of the project ok here is this awesome fischer ", "hello again"],
-    techUsed: ["Python", "Git", "HTML/CSS", "My"],
+    bigDescription: ["the description of the project ok here is this awesome fischer ", "hello again"],
+    techUsed: ["Python", "CSharp", "HTML/CSS"],
     openSource: {
       isOpen: true,
       link: "https://github.com"
