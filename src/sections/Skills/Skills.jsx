@@ -1,10 +1,11 @@
 import { programmingTech } from "../../context/constants"
-import Skill from "./skill"
+import Skill from "./Skill"
 import { forwardRef } from "react";
 
 function Skills({ HighLight }, ref) {
   return (
     <section ref={ref} className=" bg-slate-950 flex justify-center">
+      <span className="col-span-3"></span>
       <div className={`max-w-7xl flex-1 select-none pt-12 p-4 flex flex-col items-center`}>
         <h2 className="text-6xl font-extrabold text-black shadow-sm tracking-wider text-outline">SKILLS</h2> <br />
         <div className="h-1 max-w-xl w-full rounded-full mx-auto bg-gray-800"></div>

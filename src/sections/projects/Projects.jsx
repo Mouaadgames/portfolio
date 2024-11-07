@@ -26,7 +26,8 @@ function Projects({ highLightBool, highLightIds, scrollToViewBool }, ref) {
         <h2 className="text-center pb-8 pt-16 text-6xl font-extrabold text-black shadow-sm tracking-wider text-outline">PROJECTS</h2>
         <div className="h-1 max-w-xl rounded-full mx-auto bg-gray-800"></div>
         <br />
-        <div className={`${width > 800 ? "grid grid-cols-3 grid-row-5" : "flex flex-col"} gap-4 max-w-7xl m-4 xl:mx-auto`}>
+        {/* grid-cols-3 => grid-cols-1 && gap-4 => gap-8*/}
+        <div className={`${width > 1350 ? "grid grid-cols-3 grid-row-5" : "flex flex-col"} gap-8 max-w-7xl m-4 xl:mx-auto`}>
           {
             pro.map((value) => {
               return (

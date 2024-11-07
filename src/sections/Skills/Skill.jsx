@@ -16,7 +16,6 @@ function Skill({ HighLight, tech, isBig }) {
       }, 1100);
     }
     if (!isVisible) {
-      console.log("dqsd");
       setIsFinished(false)
     }
 
@@ -25,7 +24,7 @@ function Skill({ HighLight, tech, isBig }) {
     }
   }, [isVisible]);
   return (
-    <div ref={divRef} onClick={() => { HighLight(tech.name) }} className={`default-hidden ${isVisible && (isFinished ? "visibleSkill" : "show")}  alert btn h-fit font-bold ${tech.isYellow ? "bg-yellow-400 text-black hover:text-white" : "bg-slate-500 "} flex items-center justify-start flex-nowrap pl-3 gap-2  `}>
+    <div ref={divRef} onClick={() => { HighLight(tech.name) }} className={`default-hidden ${isVisible && (isFinished ? "visibleSkill" : "show")}  alert btn h-fit btn-sm font-bold ${tech.isYellow ? "bg-yellow-400 text-black hover:text-white" : "bg-slate-500 "} flex items-center justify-start flex-nowrap pl-3 gap-2  `}>
       <SkillImg tech={tech} isBig={isBig} />
       <span className="text-2xl " >{tech.name}</span>
     </div>
